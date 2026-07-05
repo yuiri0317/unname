@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    # 1. 删掉了末尾的分号，并加上了防止中文乱码和时区的安全参数
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    # 2. 确保冒号后面有一个空格，删掉分号
+    username: root
+    # 3. 密码直接写 0317，绝对不要带分号
+    password: "0317"
+    # 4. 加上驱动声明，让项目更稳健
+    driver-class-name: com.mysql.cj.jdbc.Driver
